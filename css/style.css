@@ -302,6 +302,142 @@ section {
     color: var(--light-black);
     line-height: 1.8;
 }
+
+/**About Section*/
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about .row .image{
+    flex: 1 1 40rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content .heading{
+    margin-bottom: 1rem;
+}
+
+.about .row .content .description{
+    line-height: 1.8;
+    text-align: center;
+    color: var(--light-black);
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+.about .row .content .info{
+    margin: 1rem 0;
+}
+
+.about .row .content .info h3{
+    font-size: 2rem;
+    color: var(--black);
+    background: var(--main-color);
+    padding: 1rem 2rem;
+    display: inline-block;
+}
+
+.about .row .content .info .flex{
+    background-color: var(--light-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.about .row .content .info .flex p{
+    color: var(--black);
+    font-size: 1.6rem;
+    flex: 1 1 20rem;
+}
+
+.about .row .content .info .flex p span{
+    color: var(--light-black);
+}
+
+/**Services Section*/
+.services{
+    background-color: var(--black);
+    position: relative;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+    align-items: flex-start;
+    justify-self: center;
+}
+
+.services .heading{
+    padding-top: 3rem;
+}
+
+.services .heading span{
+    background-color: var(--white);
+}
+
+.services .heading h3{
+    color: var(--white);
+}
+
+.services .box-container .box{
+    border: .2rem solid rgba(255, 255, 255, .2);
+    padding: 3rem;
+    border-top-right-radius: 5rem;
+}
+
+.services .box-container .box .icon{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box .icon img{
+    height: 7rem;
+    width: 7rem;
+    transition: .2s linear;
+}
+
+.services .box-container .box:hover .icon img{
+    transform: rotate(90deg);
+}
+
+.services .box-container .box .icon i{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.services .box-container .box:hover{
+    border: .2rem dashed rgba(255, 255, 255, .2);
+}
+
+.services .box-container .box h3{
+    color: var(--white);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.services .box-container .box p{
+    line-height: 1.8;
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+
 /**Media Queries*/
 
 @media (max-width:991px) {
