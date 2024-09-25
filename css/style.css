@@ -27,6 +27,7 @@
 }
 
 /**Global Classes*/
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -46,13 +47,74 @@ html {
     background: transparent;
 }
 
+/**Sections*/
+
 section {
     padding: 2.5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/**Button Download CV*/
+
+.btn{
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    background: var(--main-color);
+    color: var(--black);
+    border-radius: 5rem;
+    transition: .2s linear;
+    cursor: pointer;
+    overflow: hidden;   
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--black);
+    z-index: -1;
+    border-radius: 5rem;
+    transition: .2s ease-out;
+}
+
+.btn:hover::before{
+    left: 0%;
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span{
+    padding: .5rem 1.5rem;
+    background-color: var(--light-color);
+    color: var(--black);
+    border-radius: 5rem;
+    font-size: 1.8rem;
+}
+
+.heading h3{
+    font-size: 3rem;
+    color: var(--black);
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    color: var(--white);
+}
+
+/**Header*/
+
 .header {
+    background-color: var(--white);
     position: sticky;
     top: 0;
     left: 0;
@@ -103,6 +165,143 @@ section {
     display: none;
 }
 
+/**Home Section*/
+
+.home{
+    position: relative;
+}
+
+.home .bottom-image{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0; right: 0;
+    z-index: -1;
+}
+
+.home .bottom-image img{
+    width: 100%;
+}
+
+.home .flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/**Home Image*/
+
+.home .flex .image{
+    flex: 1 1 40rem;
+}
+
+.home .flex .image img{
+    width: 100%;
+    border-radius: 50%;
+    background: var(--light-color);
+    border: 1rem white solid;
+}
+
+/**Home Content*/
+
+.home .flex .content{
+    flex: 1 1 40rem;
+}
+
+.home .flex .content span{
+    font-size: 1.8rem;
+    color: var(--black);
+    background: var(--light-color);
+    border-radius: 5rem;
+    padding: .5rem 1.5rem;
+}
+
+.home .flex .content h1{
+    font-size: 6rem;
+    color: var(--black);
+    margin: 1rem 0;
+}
+
+.home .flex .content h1 em{
+    color: var(--main-color);
+    text-shadow: var(--box-shadow);
+}
+
+.home .flex .content h3{
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.home .flex .content p{
+    color: var(--light-black);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+/**Skills Section*/
+
+.skills-container{
+    background: var(--black); /*#292930*/
+}
+
+.skills-container .heading{
+    padding-top: 3rem;
+}
+
+.skills-container .heading span{
+    background: var(--white);
+}
+
+.skills-container .heading h3{
+    color: var(--white);
+}
+
+.skills-container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    z-index: 0;
+    position: relative;
+}
+
+.skills-container .box-container .box::before{
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: var(--white);
+    height: 15rem;
+    z-index: -1;
+    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0 38%);
+}
+
+.skills-container .box-container .box img{
+    height: 10rem;
+    transition: .2s linear;
+}
+
+.skills-container .box-container .box:hover img{
+    transform: translateY(-1rem);
+}
+
+.skills-container .box-container .box h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.skills-container .box-container .box p{
+    font-size: 1.4rem;
+    color: var(--light-black);
+    line-height: 1.8;
+}
 /**Media Queries*/
 
 @media (max-width:991px) {
