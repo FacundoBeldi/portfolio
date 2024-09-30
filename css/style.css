@@ -368,7 +368,6 @@ section {
 /**Services Section*/
 .services{
     background-color: var(--black);
-    position: relative;
 }
 
 .services .box-container{
@@ -381,6 +380,7 @@ section {
 
 .services .heading{
     padding-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 .services .heading span{
@@ -437,6 +437,165 @@ section {
     font-size: 1.6rem;
 }
 
+.service-top-image{
+    margin-bottom: -.5rem;
+}
+
+.service-top-image img,
+.service-bottom-image img{
+    width: 100%;
+}
+
+/**Contact Section*/
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 3rem;
+}
+
+.contact .row .form {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.contact .row .form .flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact .row .form .flex .input {
+    flex: 1 1 30rem;
+}
+
+.contact .row .form .input {
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.8rem;
+    padding: 1.2rem  1.4rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    transition: background-color 0.3s, border-color 0.3s; /* Para animar el cambio */
+}
+
+.contact .row .form .input::placeholder {
+    text-transform: capitalize;
+}
+
+.contact .row .form .input:focus {
+    background-color: var(--light-color); /* Cambia el fondo al enfocar */
+    color: var(--black); /* Asegúrate de que el texto se mantenga legible */
+}
+
+.contact .row .form textarea {
+    height: 15rem;
+    width: 100%;
+    resize: none;
+    margin-top: 1rem;
+    background-color: var(--light-bg); /* Asegúrate de que tenga el mismo fondo */
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    color: var(--black);
+    font-size: 1.8rem;
+    padding: 1.2rem 1.4rem;
+    transition: background-color 0.3s, border-color 0.3s; /* Para animar el cambio */
+}
+
+.contact .row .form .btn:hover{
+    background-color: var(--black);
+}
+
+.contact .row .box-container{
+    flex: 1 1 20rem;
+}
+.contact .row .box-container .box{
+    display: flex;
+    gap: 2rem;
+}
+
+.contact .row .box-container .box:nth-child(2){
+    margin: 2rem 0;
+    text-align: right;
+    justify-content: end;
+}
+
+.contact .row .box-container .box i{
+    font-size: 2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    color: var(--black);
+    background-color: var(--main-color);
+    border: .5rem;
+    text-align: center;
+}
+
+.contact .row .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.contact .row .box-container .box a{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--light-black);
+    padding-top: .5rem;
+    text-transform: none;
+}
+
+.contact .row .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+/**Footer Section*/
+
+.footer {
+    background: var(--black);
+    padding: 1rem; /* Añadido padding para mejorar el espaciado */
+}
+
+.footer .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer .flex .share {
+    display: flex;
+    align-items: center;
+}
+
+.footer .flex .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: .5rem;
+    line-height: 4.5rem;
+    font-size: 2.2rem;
+    background-color: var(--white);
+    text-align: center;
+    color: var(--black);
+    margin: 0 1rem; /* Ajusta el margen entre íconos */
+}
+
+.footer .flex .share a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .flex .credit {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center; /* Asegúrate de que el texto también esté centrado */
+}
+
+.footer .flex .credit span {
+    color: var(--main-color);
+}
 
 /**Media Queries*/
 
@@ -480,6 +639,17 @@ section {
 
     .header .flex .navbar a:hover{
         color: var(--main-color);
+    }
+
+    .footer .flex{
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .footer .flex .credit{
+        padding-top: 2rem;
+        border-top: .1rem solid var(--white);
+        text-align: center;
     }
 }
 
