@@ -437,8 +437,10 @@ section {
     font-size: 1.6rem;
 }
 
-.service-top-image{
+.service-top-image,
+.service-bottom-image{
     margin-bottom: -.5rem;
+    margin-top: -.5rem;
 }
 
 .service-top-image img,
@@ -650,6 +652,10 @@ section {
         padding-top: 2rem;
         border-top: .1rem solid var(--white);
         text-align: center;
+    }
+    
+    .service-top-image{
+        margin-top: -1rem;
     }
 }
 
