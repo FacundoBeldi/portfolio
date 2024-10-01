@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personal Portfolio</title>
+    <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Sweet alert-->
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
 <body>
@@ -213,10 +216,10 @@
                 <div class="heading"><span>Contáctame</span>
                     <h3> ¡Ponte en contacto!</h3>
                 </div>
-                <form action="">
+                <form action="" id="contactForm">
                     <div class="flex">
-                        <input type="text" placeholder="Tu nombre" class="input" name="name" id="name" required>
-                        <input type="email" placeholder="Tu email" class="input" name="email" id="email" required>
+                        <input type="text" placeholder="Tu nombre" class="input" name="to_name" id="name" required>
+                        <input type="email" placeholder="Tu email" class="input" name="from_name" id="email" required>
                     </div>
                     <textarea name="message" id="message" class="input" placeholder="Tu mensaje" required></textarea>
                     <input type="submit" value="Enviar mensaje" class="btn">
@@ -259,7 +262,17 @@
             <div class="credit">Created by <span>Facundo Beldi</span></div>
         </section>
     </footer>
+    <!--Local JS-->
     <script src="js/script.js"></script>
+    <!--EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("nPgkeTtbcg9DSxTas");
+        })();
+    </script>
+    <!--Sweet alert-->
+    <script src="sweetalert2.all.min.js"></script>
 </body>
 
 </html>
