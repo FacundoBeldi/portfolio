@@ -1,282 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!--Sweet alert-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
     <!--Animate.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!--Header-->
     <header class="header">
-        <section class="flex">
-            <a href="#" class="logo"><i class="fas fa-briefcase"></i>Portfolio</a>
-            <nav class="navbar">
-                <div class="fas fa-xmark" id="close-btn"></div>
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">Acerca</a>
-                <a href="#services" class="nav-link">Servicios</a>
-                <a href="#contact" class="nav-link">Contacto</a>
-            </nav>
-            <div id="menu-btn" class="fas fa-bars-staggered"></div>
-        </section>
+      <section class="flex">
+        <a href="#" class="logo"><i class="fas fa-briefcase"></i>Portfolio</a>
+        <nav class="navbar">
+          <div class="fas fa-xmark" id="close-btn"></div>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">Acerca</a>
+          <a href="#skills" class="nav-link">Habilidades</a>
+          <a href="#services" class="nav-link">Lo que hago</a>
+          <a href="#contact" class="nav-link">Contacto</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars-staggered"></div>
+      </section>
     </header>
 
     <!--Home Section-->
     <div class="home" id="home">
-        <section class="flex">
-            <div class="content">
-                <span>Hola, mi nombre es</span>
-                <h1><em>Facundo</em> Beldi</h1>
-                <h3>Y soy Desarrollador Web</h3>
-                <p>Pasionado por la tecnología y el diseño, me espacializo en crear experiencias web innovadoras y
-                    efectivas. ¡Descubre como puedo ayudarte a alcanzar tus objetivos!</p>
-                <a href="cv-folder/Profile.pdf" class="btn" download>Descargar CV</a>
-            </div>
-            <div class="image">
-                <img src="images/home.png" alt="">
-            </div>
-        </section>
+      <section class="flex">
+        <div class="content">
+          <span>Hola, mi nombre es</span>
 
-        <div class="bottom-image">
-            <img src="images/home-shape.png" alt="">
+          <h1><em>Facundo</em> Beldi</h1>
+
+          <h3>Data · Business · Technology</h3>
+
+          <p>
+            Conecto datos, tecnología y negocio para crear soluciones que
+            simplifican procesos y ayudan a tomar mejores decisiones.
+          </p>
+
+          <a href="cv-folder/Profile.pdf" class="btn" download>
+            Descargar CV
+          </a>
+
+          <div class="tech-stack">
+            <span>Power BI</span>
+            <span>Excel</span>
+            <span>Python</span>
+            <span>Automation & AI</span>
+            <span>Web Development</span>
+          </div>
         </div>
+
+        <div class="image">
+          <img src="images/home.png" alt="Facundo Beldi" />
+        </div>
+      </section>
+
+      <div class="bottom-image">
+        <img src="images/home-shape.png" alt="" />
+      </div>
     </div>
 
-    <!--Skill Section-->
-    <div class="skills-container">
-        <div class="heading">
-            <span>Habilidades</span>
-            <h3>Experiencias que tengo</h3>
-        </div>
-        <section class="box-container">
-            <div class="box">
-                <img src="images/icon-1.png" alt="">
-                <h3>HTML</h3>
-                <p>Estructuras web semánticas y accesibles para diseñar interfaces intuitivas y fáciles de usar.
-                </p>
-            </div>
-            <div class="box">
-                <img src="images/icon-2.png" alt="">
-                <h3>CSS</h3>
-                <p>Diseño y desarrollo de interfaces visuales atractivas y responsivas para todo tipo de dispositivos.
-                </p>
+    <!-- Skills Section -->
+    <div class="skills-container" id="skills">
+      <div class="heading">
+        <span>Habilidades</span>
+        <h3>Herramientas que utilizo</h3>
+      </div>
 
-            </div>
-            <div class="box">
-                <img src="images/icon-3.png" alt="">
-                <h3>JavaScript</h3>
-                <p>Desarrollo de funcionalidades interactivas y dinámicas para mejorar la experiencia del usuario.
-                </p>
-            </div>
-            <div class="box">
-                <img src="images/icon-4.png" alt="">
-                <h3>Bootstrap</h3>
-                <p>Diseños responsivos y móviles primeros, utilizando la biblioteca de componentes Front-end de
-                    Bootstrap.
-                </p>
-            </div>
-            <div class="box">
-                <img src="images/icon-5.png" alt="">
-                <h3>ReactJS</h3>
-                <p>Aplicaciones web escalables y adaptables para crear proyectos de alta calidad y rendimiento,
-                    utilizando componentes reutilizables.
-                </p>
-            </div>
-            <div class="box">
-                <img src="images/icon-6.png" alt="">
-                <h3>Github</h3>
-                <p>Gestión y colaboración en proyectos de desarrollo de software, utilizando el control de versiones de
-                    GitHub.
-                </p>
-            </div>
-        </section>
+      <section class="box-container">
+        <!-- Data & Business Intelligence -->
+        <div class="box">
+          <div class="skill-icon">
+            <i class="fas fa-chart-column"></i>
+          </div>
+
+          <h3>Data & Business Intelligence</h3>
+
+          <p>
+            Análisis y visualización de información para transformar datos en
+            herramientas útiles para la toma de decisiones.
+          </p>
+
+          <div class="skill-list">
+            <span>Power BI</span>
+            <span>Excel</span>
+            <span>Power Query</span>
+            <span>DAX</span>
+          </div>
+        </div>
+
+        <!-- Automation & AI -->
+        <div class="box">
+          <div class="skill-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+
+          <h3>Automation & AI</h3>
+
+          <p>
+            Automatización de tareas y desarrollo de soluciones utilizando
+            programación, inteligencia artificial y herramientas digitales.
+          </p>
+
+          <div class="skill-list">
+            <span>Python</span>
+            <span>VBA</span>
+            <span>Web Scraping</span>
+            <span>Copilot</span>
+          </div>
+        </div>
+
+        <!-- Development -->
+        <div class="box">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+
+          <h3>Web Development</h3>
+
+          <p>
+            Desarrollo de sitios y aplicaciones web enfocadas en crear
+            experiencias funcionales, intuitivas y adaptables.
+          </p>
+
+          <div class="skill-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Git / GitHub</span>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!--About Section-->
+    <!-- About Section -->
 
     <section class="about" id="about">
-        <div class="row">
-            <div class="image">
-                <img src="images/about.jpg" alt="">
-            </div>
-            <div class="content">
-                <div class="heading"><span>Acerca de mi</span>
-                    <h3>mi educación y objetivos</h3>
-                </div>
-                <p class="description">Me gradué en Programación Informática en la UCES
-                    y he complementado mis estudios con cursos especializados en diferentes academias educativas. Estoy
-                    siempre buscando nuevas oportunidades para crecer y aplicar mis
-                    conocimientos en proyectos desafiantes.</p>
-                <div class="info">
-                    <h3>personal info</h3>
-                    <div class="flex">
-                        <p><span>Nombre :</span> Facundo Beldi</p>
-                        <p><span>Edad :</span> 25 años</p>
-                        <p><span>Habilidad Principal :</span> Front-end</p>
-                        <p><span>Freelance :</span> Disponible</p>
-                        <p><span>Idiomas :</span> Español e Inglés</p>
-                        <p><span>Intereses :</span> Diseño UI/UX, Desarrollo Web</p>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="image">
+          <img src="images/about.jpg" alt="Facundo Beldi" />
         </div>
+
+        <div class="content">
+          <div class="heading">
+            <span>Acerca de mí</span>
+            <h3>Mi perfil y objetivos</h3>
+          </div>
+
+          <p class="description">
+            Soy Técnico Universitario en Programación Informática y actualmente
+            me desarrollo en el área comercial, donde combino análisis de datos,
+            tecnología y conocimiento del negocio para optimizar procesos y
+            facilitar la toma de decisiones.
+          </p>
+
+          <p class="description">
+            Trabajo principalmente con Power BI, Excel, automatización y
+            herramientas de inteligencia artificial, mientras continúo
+            desarrollándome en programación y desarrollo de soluciones
+            digitales.
+          </p>
+
+          <div class="info">
+            <h3>Perfil profesional</h3>
+
+            <div class="flex">
+              <p><span>Nombre :</span> Facundo Beldi</p>
+              <p><span>Formación :</span> Programación Informática</p>
+              <p><span>Enfoque :</span> Data & Business Intelligence</p>
+              <p><span>Experiencia :</span> Área Comercial</p>
+              <p><span>Idiomas :</span> Español e Inglés</p>
+              <p>
+                <span>Intereses :</span> Datos, Automatización, IA y Tecnología
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
 
     <div class="service-top-image">
-        <img src="images/section-shape-bottom.png" alt="">
+      <img src="images/section-shape-bottom.png" alt="" />
     </div>
 
     <div class="services" id="services">
-        <div class="heading">
-            <span>Mis servicios</span>
-            <h3>Lo que ofrezco</h3>
+      <div class="heading">
+        <span>Lo que hago</span>
+        <h3>Soluciones que puedo desarrollar</h3>
+      </div>
+
+      <section class="box-container">
+        <!-- Data & BI -->
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-chart-column"></i>
+          </div>
+
+          <h3>Data & Business Intelligence</h3>
+
+          <p>
+            Desarrollo dashboards y herramientas de análisis que transforman
+            información en indicadores claros para facilitar la toma de
+            decisiones.
+          </p>
         </div>
-        <section class="box-container">
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-1.png" alt="">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Diseño Web</h3>
-                <p>Diseño sitios web atractivos y funcionales, adaptados a las necesidades específicas de cada cliente.
-                    Me enfoco en crear interfaces de usuario intuitivas, asegurando que cada
-                    proyecto brinde una excelente experiencia de usuario.</p>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-2.png" alt="">
-                    <i class="fas fa-cloud-arrow-up"></i>
-                </div>
-                <h3>Web Hosting</h3>
-                <p>alojamiento web estables y seguras para que tu sitio esté siempre accesible. Con un enfoque en el
-                    rendimiento y la seguridad, me encargo de administrar el hosting para que puedas concentrarte en lo
-                    que realmente importa: tu negocio.</p>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-3.png" alt="">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Mantenimiento Web</h3>
-                <p>Mantenimiento para asegurar que tu sitio web siempre funcione de manera óptima. Esto incluye
-                    resolución de errores, mejoras en la seguridad y optimización del
-                    rendimiento para mantener tu sitio actualizado y seguro.</p>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-4.png" alt="">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3>Freelancing</h3>
-                <p>Trabajos de manera independiente, en proyectos personalizados de desarrollo web. Mi objetivo es
-                    aportar soluciones efectivas y adaptadas para los requisitos de cada cliente, buscando la mejor
-                    calidad posible y eficiencia.</p>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-5.png" alt="">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>SEO Optimization</h3>
-                <p>Optimizo sitios web para mejorar su visibilidad en los motores de búsqueda, utilizando técnicas
-                    de SEO que ayudan a mis clientes a atraer más tráfico orgánico, mejorar su ranking y
-                    alcanzar un mayor público objetivo.</p>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <img src="images/icon-shape-6.png" alt="">
-                    <i class="fas fa-object-group"></i>
-                </div>
-                <h3>UI/UX Design</h3>
-                <p>diseño de experiencias de usuario (UX) que son tanto funcionales como atractivas, y en la creación de
-                    interfaces de usuario (UI) que facilitan la navegación y mejoran la interacción con los productos
-                    digitales.</p>
-            </div>
-        </section>
+
+        <!-- Automation -->
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-gears"></i>
+          </div>
+
+          <h3>Automatización de procesos</h3>
+
+          <p>
+            Identifico tareas repetitivas y desarrollo soluciones para reducir
+            trabajo manual, minimizar errores y mejorar la eficiencia operativa.
+          </p>
+        </div>
+
+        <!-- Reporting -->
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+
+          <h3>Reporting & Dashboards</h3>
+
+          <p>
+            Creo reportes dinámicos y visualizaciones adaptadas a las
+            necesidades de cada negocio o equipo para facilitar el seguimiento
+            de indicadores.
+          </p>
+        </div>
+
+        <!-- AI -->
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-robot"></i>
+          </div>
+
+          <h3>Inteligencia Artificial</h3>
+
+          <p>
+            Implemento herramientas de inteligencia artificial y asistentes
+            digitales para facilitar el acceso a información y optimizar tareas.
+          </p>
+        </div>
+
+        <!-- Python -->
+        <div class="box">
+          <div class="icon">
+            <i class="fab fa-python"></i>
+          </div>
+
+          <h3>Python & Data Solutions</h3>
+
+          <p>
+            Desarrollo scripts y herramientas para procesar información,
+            automatizar tareas y trabajar con diferentes fuentes de datos.
+          </p>
+        </div>
+
+        <!-- Web Development -->
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-code"></i>
+          </div>
+
+          <h3>Desarrollo Web</h3>
+
+          <p>
+            Desarrollo sitios y aplicaciones web funcionales, modernas y
+            adaptables a diferentes dispositivos y necesidades.
+          </p>
+        </div>
+      </section>
     </div>
 
     <div class="service-bottom-image">
-        <img src="images/section-shape-top.png" alt="">
+      <img src="images/section-shape-top.png" alt="" />
     </div>
 
     <!-- Contact Section -->
 
     <section class="contact" id="contact">
-        <div class="row">
-            <div class="form">
-                <div class="box animate-on-scroll" style="animation-duration: 2s; animation-delay: 0.5s;">
-                    <div class="heading"><span>Contáctame</span>
-                        <h3> ¡Ponte en contacto!</h3>
-                    </div>
-                </div>
-                <form action="" id="contactForm">
-                    <div class="flex">
-                        <input type="text" placeholder="Tu nombre" class="input" name="to_name" id="name" required>
-                        <input type="email" placeholder="Tu email" class="input" name="from_name" id="email" required>
-                    </div>
-                    <textarea name="message" id="message" class="input" placeholder="Tu mensaje" required></textarea>
-                    <input type="submit" value="Enviar mensaje" class="btn">
-                </form>
+      <div class="row">
+        <div class="form">
+          <div
+            class="box animate-on-scroll"
+            style="animation-duration: 2s; animation-delay: 0.5s"
+          >
+            <div class="heading">
+              <span>Contáctame</span>
+              <h3>¡Ponte en contacto!</h3>
             </div>
-            <div class="box-container">
-                <div class="box">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Mi numero</h3>
-                        <a href="https://wa.me/5491123972860">1123972860</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div>
-                        <h3>Mi Email</h3>
-                        <a href="mailto:facu.beldi@hotmail.com">facu.beldi@hotmail.com</a>
-                    </div>
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Mi Direccion</h3>
-                        <a href="mailto:facu.beldi@hotmail.com">Buenos Aires, Argentina</a>
-                    </div>
-                </div>
+          </div>
+          <form action="" id="contactForm">
+            <div class="flex">
+              <input
+                type="text"
+                placeholder="Tu nombre"
+                class="input"
+                name="to_name"
+                id="name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="input"
+                name="from_name"
+                id="email"
+                required
+              />
             </div>
+            <textarea
+              name="message"
+              id="message"
+              class="input"
+              placeholder="Tu mensaje"
+              required
+            ></textarea>
+            <input type="submit" value="Enviar mensaje" class="btn" />
+          </form>
         </div>
+        <div class="box-container">
+          <div class="box">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Mi número</h3>
+              <a href="https://wa.me/5491123972860">1123972860</a>
+            </div>
+          </div>
+          <div class="box">
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:facu.beldi@hotmail.com">facu.beldi@hotmail.com</a>
+            </div>
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="box">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Mi dirección</h3>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Buenos+Aires%2C+Argentina"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buenos Aires, Argentina
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Footer Section-->
     <footer class="footer">
-        <section class="flex">
-            <div class="share">
-                <a href="https://www.linkedin.com/in/facundobeldi/" class="fab fa-linkedin"></a>
-                <a href="https://github.com/FacundoBeldi" class="fab fa-github"></a>
-                <a href="https://wa.me/5491123972860" class="fab fa-whatsapp"></a>
-            </div>
-            <div class="credit">Created by <span>Facundo Beldi</span></div>
-        </section>
+      <section class="flex">
+        <div class="share">
+          <a
+            href="https://www.linkedin.com/in/facundobeldi/"
+            class="fab fa-linkedin"
+          ></a>
+          <a href="https://github.com/FacundoBeldi" class="fab fa-github"></a>
+          <a href="https://wa.me/5491123972860" class="fab fa-whatsapp"></a>
+        </div>
+        <div class="credit">Created by <span>Facundo Beldi</span></div>
+      </section>
     </footer>
-    <!--Local JS-->
-    <script src="js/script.js"></script>
-    <!--EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("nPgkeTtbcg9DSxTas");
-        })();
-    </script>
     <!--Sweet alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
-
+    <!--Local JS-->
+    <script src="js/script.js"></script>
+  </body>
 </html>

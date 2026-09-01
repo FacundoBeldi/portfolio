@@ -1,60 +1,92 @@
-let menuBtn = document.querySelector('#menu-btn');
-let closeBtn = document.querySelector('#close-btn');
-let navbar = document.querySelector('.header .flex .navbar');
+// =========================================================
+// NAVBAR
+// =========================================================
 
-menuBtn.onclick = () => {
-    navbar.classList.add('active');
-    console.log('clicked');
-}
+const menuBtn = document.querySelector("#menu-btn");
+const closeBtn = document.querySelector("#close-btn");
+const navbar = document.querySelector(".header .flex .navbar");
+const navLinks = document.querySelectorAll(".nav-link");
 
-closeBtn.onclick = () => {
-    navbar.classList.remove('active');
-    console.log('clicked');
-}
-
-window.onscroll = () => {
-    navbar.classList.remove('active');
-}
-
-//EmailJS
-
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Previene el comportamiento por defecto del formulario
-
-    // Enviar el formulario usando EmailJS
-    emailjs.sendForm('service_t261z8s', 'template_4qzw68c', this)
-        .then(function () {
-            Swal.fire({
-                icon: "success", // Icono de éxito
-                title: "Genial!",
-                text: "Mensaje enviado con éxito!",
-            });
-            document.getElementById('contactForm').reset(); // Reinicia el formulario
-        }, function (error) {
-            Swal.fire({
-                icon: "error", // Icono de error
-                title: "Oops...",
-                text: "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.",
-                footer: '<a href="mailto:facu.beldi@gmail.com">Contactame si el problema persiste</a>'
-            });
-        });
+menuBtn.addEventListener("click", () => {
+    navbar.classList.add("active");
 });
 
-//Observer
+closeBtn.addEventListener("click", () => {
+    navbar.classList.remove("active");
+});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated', 'animate__fadeInUp'); // Agrega clases de Animate.css
-            observer.unobserve(entry.target); // Deja de observar el elemento una vez animado (opcional)
-        }
+// Cerrar menú al seleccionar una sección
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
     });
 });
 
-// Selecciona todos los elementos que tienen la clase 'animate-on-scroll'
-const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+// Cerrar menú al hacer scroll
+window.addEventListener("scroll", () => {
+    navbar.classList.remove("active");
+});
 
-// Aplica el observer a cada uno de los elementos
-elementsToAnimate.forEach(element => {
+
+// =========================================================
+// CONTACT FORM — WHATSAPP
+// =========================================================
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const whatsappNumber = "5491123972860";
+
+    const whatsappMessage =
+        `Hola Facundo!%0A%0A` +
+        `*Nombre:* ${name}%0A` +
+        `*Email:* ${email}%0A%0A` +
+        `*Mensaje:* ${message}`;
+
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
+    contactForm.reset();
+});
+
+
+// =========================================================
+// SCROLL ANIMATIONS
+// =========================================================
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                    "animate__animated",
+                    "animate__fadeInUp"
+                );
+
+                observer.unobserve(entry.target);
+            }
+
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+const elementsToAnimate = document.querySelectorAll(
+    ".animate-on-scroll"
+);
+
+elementsToAnimate.forEach((element) => {
     observer.observe(element);
 });
